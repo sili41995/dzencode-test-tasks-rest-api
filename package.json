@@ -2,7 +2,6 @@
   "name": "dzencode-test-tasks-rest-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "start": "node -r tsconfig-paths/register ./dist/server.js",
     "dev": "nodemon",
