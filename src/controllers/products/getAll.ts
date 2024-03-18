@@ -9,9 +9,7 @@ const getAll = async (
 ): Promise<void> => {
   const result = await Product.find({});
 
-  res.status(200).json({
-    result,
-  });
+  res.status(200).json(result);
 };
 
 export default ctrlWrapper<Request>(getAll);
