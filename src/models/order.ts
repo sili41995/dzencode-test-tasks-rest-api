@@ -38,7 +38,7 @@ const addSchema = Joi.object({
   date: Joi.date()
     .required()
     .messages({ 'any.required': ErrorMessages.dateReqErr }),
-  description: Joi.date()
+  description: Joi.string()
     .required()
     .messages({ 'any.required': ErrorMessages.descriptionReqErr }),
   products: Joi.array(),
