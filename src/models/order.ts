@@ -18,7 +18,10 @@ const orderSchema = new Schema<IOrder>(
       type: String,
       required: [true, ErrorMessages.descriptionReqErr],
     },
-    products: [{ type: Schema.Types.ObjectId, ref: ModelNames.product }],
+    products: {
+      type: [{ type: Schema.Types.ObjectId, ref: ModelNames.product }],
+      default: [],
+    },
   },
   { versionKey: false, timestamps: true }
 );
