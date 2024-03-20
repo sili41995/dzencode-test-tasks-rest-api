@@ -1,9 +1,9 @@
+import Joi from 'joi';
 import { Schema, model } from 'mongoose';
 import { preUpdate, handleMongooseError } from './hooks';
 import { ErrorMessages } from '../constants';
 import { IOrder } from '../types/types';
 import ModelNames from './modelNames';
-import Joi from 'joi';
 
 const orderSchema = new Schema<IOrder>(
   {

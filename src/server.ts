@@ -1,8 +1,8 @@
 import mongoose from 'mongoose';
-import app from './app';
-import { Messages } from './constants';
 import { Server } from 'socket.io';
 import { createServer } from 'http';
+import { Messages } from './constants';
+import app from './app';
 
 let activeConnection = 0;
 
