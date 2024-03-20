@@ -17,11 +17,12 @@ wsServer.on('connection', (socket) => {
   socket.on('new-connection', () => {
     activeConnection += 1;
     socket.emit('new-connection', activeConnection);
+    socket.broadcast.emit('new-connection', activeConnection);
   });
 
   socket.on('disconnect', () => {
     activeConnection -= 1;
-    socket.broadcast.emit('new-connection', activeConnection);
+    socket.broadcast.emit('user-disconnect', activeConnection);
   });
 });
 
